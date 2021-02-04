@@ -4,6 +4,8 @@ import ReactFullpage from "@fullpage/react-fullpage"
 
 import "./styles.css"
 import './bg.css'
+import './glitch.css'
+
 class App extends React.Component {
 
     state = {
@@ -36,7 +38,7 @@ class App extends React.Component {
                     <div className="line"></div>
                     <div className="line"></div>
                 </div>
-                
+
             <ReactFullpage
                 scrollOverflow={true}
                 //sectionsColor={["orange", "purple", "green"]}
@@ -45,9 +47,14 @@ class App extends React.Component {
                 render={({ state, fullpageApi }) => {
                     return (
                         <div id="fullpage-wrapper">
-                            <div className="section section1">
+
+                            <div className="section">
+                                <div>
+                                    <a href="#" className="glitch" data-glitch="Explore" onClick={() => fullpageApi.moveTo(1, 0)}>Explore</a>
+                                </div>
                                 <h3>Section 1</h3>
                             </div>
+
                             <div className="section">
                                 <div className="slide">
                                     <h3>Slide 2.1</h3>
@@ -59,11 +66,10 @@ class App extends React.Component {
                                     <h3>Slide 2.3</h3>
                                 </div>
                             </div>
+
                             <div className="section">
                                 <h3>Section 3</h3>
-                                <button onClick={() => fullpageApi.moveTo(1, 0)}>
-                                    Move top
-                                </button>
+                                {/*<a href="#" className="glitch" data-glitch="Explore" onClick={() => fullpageApi.moveTo(1, 0)}>Explore</a>*/}
                             </div>
                         </div>
                     );

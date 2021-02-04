@@ -59,7 +59,7 @@ body {
 }
 
 .line:nth-child(1)::after {
-    animation-delay: 5s;
+    animation-delay: 10s;
 }
 
 .line:nth-child(3) {
@@ -67,7 +67,7 @@ body {
 }
 
 .line:nth-child(3)::after {
-    animation-delay: 5s;
+    animation-delay: 10s;
 }
 
 @keyframes drop {
