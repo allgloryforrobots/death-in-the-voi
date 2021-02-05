@@ -2,9 +2,11 @@ import React from "react"
 import "fullpage.js/vendors/scrolloverflow" // Optional. When using scrollOverflow:true
 import ReactFullpage from "@fullpage/react-fullpage"
 
-import "./styles.css"
 import './bg.css'
 import './glitch.css'
+
+import logo1 from './assets/DEATH IN THE VOID.png'
+import logo2 from './assets/SCI-FI HORROR.png'
 
 class App extends React.Component {
 
@@ -49,13 +51,63 @@ class App extends React.Component {
                         <div id="fullpage-wrapper">
 
                             <div className="section">
-                                <div>
-                                    <a href="#" className="glitch" data-glitch="Explore" onClick={() => fullpageApi.moveTo(1, 0)}>Explore</a>
+
+
+                                    <h3 className="glitch menu1"
+                                        style={{cursor: 'pointer'}}
+                                        data-glitch="Explore"
+                                        onClick={() => fullpageApi.moveTo(2, 0)}>
+                                        Explore
+                                    </h3>
+
+                                    <h3 className="glitch menu2"
+                                        style={{cursor: 'pointer'}}
+                                        data-glitch="About Us"
+                                        onClick={() => fullpageApi.moveTo(3, 0)}>
+                                        About Us
+                                    </h3>
+
+
+                                <div style={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    marginBottom: 20
+
+                                }}>
+                                    <img src={logo1} alt="Death in the Void"/>
                                 </div>
-                                <h3>Section 1</h3>
+
+                                <div style={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    marginBottom: 20
+                                }}>
+                                    <img src={logo2} alt="Sci-fi horror"/>
+                                </div>
+
+                                <div style={{
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    marginBottom: 20
+                                }}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#c1ffc7"
+                                         className="bi bi-chevron-double-down" viewBox="0 0 16 16"
+                                         style={{cursor: 'pointer'}}
+                                         onClick={() => fullpageApi.moveTo(2, 0)}
+                                    >
+                                        <path fillRule="evenodd"
+                                              d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                        <path fillRule="evenodd"
+                                              d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
+                                    </svg>
+                                </div>
+
+
+
                             </div>
 
                             <div className="section">
+
                                 <div className="slide">
                                     <h3>Slide 2.1</h3>
                                 </div>
@@ -65,10 +117,13 @@ class App extends React.Component {
                                 <div className="slide">
                                     <h3>Slide 2.3</h3>
                                 </div>
+
                             </div>
 
                             <div className="section">
+
                                 <h3>Section 3</h3>
+
                                 {/*<a href="#" className="glitch" data-glitch="Explore" onClick={() => fullpageApi.moveTo(1, 0)}>Explore</a>*/}
                             </div>
                         </div>
