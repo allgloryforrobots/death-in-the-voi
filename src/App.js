@@ -1,12 +1,18 @@
 import React from "react"
 import "fullpage.js/vendors/scrolloverflow" // Optional. When using scrollOverflow:true
 import ReactFullpage from "@fullpage/react-fullpage"
+import './App.css'
 
 import './bg.css'
 import './glitch.css'
 
 import logo1 from './assets/DEATH IN THE VOID.png'
 import logo2 from './assets/SCI-FI HORROR.png'
+
+import img1 from './assets/1.png'
+import img2 from './assets/2.jpg'
+import img3 from './assets/3.png'
+import img4 from './assets/4.jpg'
 
 class App extends React.Component {
 
@@ -16,15 +22,15 @@ class App extends React.Component {
 
     onLeave(origin, destination, direction) {
         console.log("Leaving section " + origin.index)
-        this.setState({
+        this.setState(state => ({
             current: origin.index
-        })
+        }))
     }
     afterLoad(origin, destination, direction) {
         console.log("After load: " + destination.index)
-        this.setState({
+        this.setState(state => ({
             current: destination.index
-        })
+        }))
     }
     render() {
         return (
@@ -35,6 +41,7 @@ class App extends React.Component {
                 }}>
                     {this.state.current}
                 </h1>
+
                 <div className="lines">
                     <div className="line"></div>
                     <div className="line"></div>
@@ -68,28 +75,15 @@ class App extends React.Component {
                                     </h3>
 
 
-                                <div style={{
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    marginBottom: 20
-
-                                }}>
+                                <div className="container">
                                     <img src={logo1} alt="Death in the Void"/>
                                 </div>
 
-                                <div style={{
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    marginBottom: 20
-                                }}>
+                                <div className="container">
                                     <img src={logo2} alt="Sci-fi horror"/>
                                 </div>
 
-                                <div style={{
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    marginBottom: 20
-                                }}>
+                                <div className="container">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#c1ffc7"
                                          className="bi bi-chevron-double-down" viewBox="0 0 16 16"
                                          style={{cursor: 'pointer'}}
@@ -107,24 +101,41 @@ class App extends React.Component {
                             </div>
 
                             <div className="section">
+                                <div className="slide">
+                                    <div className="container" style={{flexDirection: 'column'}}>
+                                        <div className="imgContainer">
+                                            <img className="Img" src={img1} alt="img"/>
+                                        </div>
+
+                                        <div>
+                                            <h3>Slide 2.1</h3>
+                                        </div>
+                                    </div>
+
+                                </div>
 
                                 <div className="slide">
-                                    <h3>Slide 2.1</h3>
-                                </div>
-                                <div className="slide">
-                                    <h3>Slide 2.2</h3>
-                                </div>
-                                <div className="slide">
-                                    <h3>Slide 2.3</h3>
+                                    <div className="container">
+                                        <h3>Slide 2.2</h3>
+                                    </div>
                                 </div>
 
                             </div>
 
                             <div className="section">
 
-                                <h3>Section 3</h3>
+                                <div className="container">
 
-                                {/*<a href="#" className="glitch" data-glitch="Explore" onClick={() => fullpageApi.moveTo(1, 0)}>Explore</a>*/}
+                                    <h3>Section 3</h3>
+                                </div>
+
+                                <h3 className="glitch"
+                                    style={{cursor: 'pointer'}}
+                                    data-glitch="Go top"
+                                    onClick={() => fullpageApi.moveTo(1, 0)}>
+                                    Go top
+                                </h3>
+
                             </div>
                         </div>
                     );
