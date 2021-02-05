@@ -9,13 +9,14 @@
 /* Контейнер картинки */
 .imgContainer {
     max-width: 50vw;
+    height: 300px;
     margin: 0px 0px 20px 0px;
-    padding: 0px 0px 58% 0px;
+    /*padding: 0px 0px 58% 0px;*/
     overflow: hidden;
     position: relative;
 }
 /* Картинка */
-.Img{
+.Img {
     width: 100%;
     /*height: 100%;*/
     object-fit: cover;
@@ -23,3 +24,36 @@
     /*top: 0;*/
     /*left: 0;*/
 }
+
+.hud {
+    opacity: 0;
+}
+.hud_transition {
+    opacity: 0.3;
+}
+
+.iconHover:hover {
+    fill: #FFF
+}
+
+.hide {
+    opacity: 0;
+    transition: 2s opacity ease-in-out;
+}
+.visible {
+    opacity: 0.1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

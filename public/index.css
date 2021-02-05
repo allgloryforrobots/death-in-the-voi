@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'DINPro-Regular';
+    src: local('DINPro-Regular'), url(DINPro-Regular.otf) format('otf');
+}
+
+@font-face {
+    font-family: 'DINPro-Light';
+    src: local('DINPro-Light'), url(DINPro-Light.otf) format('otf');
+}
