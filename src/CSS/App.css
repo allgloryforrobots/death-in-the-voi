@@ -44,8 +44,10 @@
     opacity: 0.1;
 }
 
-.Before:before {
-
+.bg_text {
+    position: absolute;
+    z-index: -1;
+    opacity: 0.3;
 }
 
 

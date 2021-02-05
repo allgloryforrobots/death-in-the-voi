@@ -10,13 +10,11 @@ import './CSS/neon.css'
 import logo1 from './assets/DEATH IN THE VOID.png'
 import logo2 from './assets/SCI-FI HORROR.png'
 
-import img1 from './assets/1.png'
-import img2 from './assets/2.jpg'
-import img3 from './assets/3.png'
-import img4 from './assets/4.jpg'
 import onSlideEffect from './assets/onSlideEffect.png'
-import Section2Sliders from "./components/Section2Sliders";
-import BgLines from "./components/BgLines";
+
+
+import Section2Sliders from "./components/Section2Sliders"
+import BgLines from "./components/BgLines"
 
 class App extends React.Component {
 
